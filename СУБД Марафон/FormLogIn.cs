@@ -43,6 +43,7 @@ namespace СУБД_Марафон
         {
             String txtFilter = $"Login = '{TbxLogin.Text}' and Password = '{TbxPass.Text}'";
 
+            //Зритель
             if(CbxTypeUser.SelectedIndex == 0)
             {
                 BsZritel.Filter = txtFilter;
@@ -51,6 +52,7 @@ namespace СУБД_Марафон
                 {
                     FormZritel zritel = new FormZritel();
                     this.Visible = false;
+                    zritel.BsZritel.Filter = this.BsZritel.Filter;
                     zritel.ShowDialog();
                     this.Visible = true;
 
@@ -68,6 +70,7 @@ namespace СУБД_Марафон
                 }
             }
             else
+            //Бегун
             if(CbxTypeUser.SelectedIndex == 1)
             {
                 BsBegun.Filter = txtFilter;
@@ -93,6 +96,7 @@ namespace СУБД_Марафон
                 }
             }
             else
+            //Спонсор
             if (CbxTypeUser.SelectedIndex == 2)
             {
                 BsSponsor.Filter = txtFilter;
@@ -101,6 +105,7 @@ namespace СУБД_Марафон
                 {
                     FormSponsor sponsor = new FormSponsor();
                     this.Visible = false;
+                    sponsor.BsSponsor.Filter = txtFilter;
                     sponsor.ShowDialog();
                     this.Visible = true;
 
