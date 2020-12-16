@@ -145,9 +145,9 @@
         private System.Windows.Forms.Label LblTitle;
         private System.Windows.Forms.PictureBox PbxLogo;
         private u37_1DataSet u37_1DataSet1;
-        private System.Windows.Forms.BindingSource BsBegun;
         private u37_1DataSetTableAdapters.BegunTableAdapter begunTableAdapter;
         private u37_1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Label fIOLabel1;
+        public System.Windows.Forms.BindingSource BsBegun;
     }
 }
