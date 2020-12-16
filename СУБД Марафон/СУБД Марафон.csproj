@@ -49,11 +49,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBegun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBegun.Designer.cs">
+      <DependentUpon>FormBegun.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogIn.Designer.cs">
       <DependentUpon>FormLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSponsor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSponsor.Designer.cs">
+      <DependentUpon>FormSponsor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormZritel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormZritel.Designer.cs">
+      <DependentUpon>FormZritel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,8 +80,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>u37_1DataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormBegun.resx">
+      <DependentUpon>FormBegun.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogIn.resx">
       <DependentUpon>FormLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSponsor.resx">
+      <DependentUpon>FormSponsor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormZritel.resx">
+      <DependentUpon>FormZritel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

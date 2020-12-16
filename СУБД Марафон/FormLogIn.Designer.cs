@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogIn));
             this.panel1 = new System.Windows.Forms.Panel();
             this.LblTitle = new System.Windows.Forms.Label();
@@ -41,8 +42,19 @@
             this.BtnLogIn = new System.Windows.Forms.Button();
             this.CbxShowPas = new System.Windows.Forms.CheckBox();
             this.LblRegestry = new System.Windows.Forms.Label();
+            this.u37_1DataSet1 = new СУБД_Марафон.u37_1DataSet();
+            this.BsZritel = new System.Windows.Forms.BindingSource(this.components);
+            this.zritelsTableAdapter = new СУБД_Марафон.u37_1DataSetTableAdapters.ZritelsTableAdapter();
+            this.BsSponsor = new System.Windows.Forms.BindingSource(this.components);
+            this.sponsorTableAdapter = new СУБД_Марафон.u37_1DataSetTableAdapters.SponsorTableAdapter();
+            this.BsBegun = new System.Windows.Forms.BindingSource(this.components);
+            this.begunTableAdapter = new СУБД_Марафон.u37_1DataSetTableAdapters.BegunTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.u37_1DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BsZritel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BsSponsor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BsBegun)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -147,6 +159,7 @@
             this.BtnLogIn.TabIndex = 7;
             this.BtnLogIn.Text = "Вход";
             this.BtnLogIn.UseVisualStyleBackColor = false;
+            this.BtnLogIn.Click += new System.EventHandler(this.BtnLogIn_Click);
             // 
             // CbxShowPas
             // 
@@ -169,6 +182,39 @@
             this.LblRegestry.Size = new System.Drawing.Size(108, 19);
             this.LblRegestry.TabIndex = 9;
             this.LblRegestry.Text = "Регистрация";
+            // 
+            // u37_1DataSet1
+            // 
+            this.u37_1DataSet1.DataSetName = "u37_1DataSet";
+            this.u37_1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // BsZritel
+            // 
+            this.BsZritel.DataMember = "Zritels";
+            this.BsZritel.DataSource = this.u37_1DataSet1;
+            this.BsZritel.Filter = "";
+            // 
+            // zritelsTableAdapter
+            // 
+            this.zritelsTableAdapter.ClearBeforeFill = true;
+            // 
+            // BsSponsor
+            // 
+            this.BsSponsor.DataMember = "Sponsor";
+            this.BsSponsor.DataSource = this.u37_1DataSet1;
+            // 
+            // sponsorTableAdapter
+            // 
+            this.sponsorTableAdapter.ClearBeforeFill = true;
+            // 
+            // BsBegun
+            // 
+            this.BsBegun.DataMember = "Begun";
+            this.BsBegun.DataSource = this.u37_1DataSet1;
+            // 
+            // begunTableAdapter
+            // 
+            this.begunTableAdapter.ClearBeforeFill = true;
             // 
             // FormLogIn
             // 
@@ -195,6 +241,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.u37_1DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BsZritel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BsSponsor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BsBegun)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,6 +264,13 @@
         private System.Windows.Forms.Button BtnLogIn;
         private System.Windows.Forms.CheckBox CbxShowPas;
         private System.Windows.Forms.Label LblRegestry;
+        private u37_1DataSet u37_1DataSet1;
+        private System.Windows.Forms.BindingSource BsZritel;
+        private u37_1DataSetTableAdapters.ZritelsTableAdapter zritelsTableAdapter;
+        private System.Windows.Forms.BindingSource BsSponsor;
+        private u37_1DataSetTableAdapters.SponsorTableAdapter sponsorTableAdapter;
+        private System.Windows.Forms.BindingSource BsBegun;
+        private u37_1DataSetTableAdapters.BegunTableAdapter begunTableAdapter;
     }
 }
 
