@@ -65,7 +65,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(496, 74);
+            this.panel1.Size = new System.Drawing.Size(486, 74);
             this.panel1.TabIndex = 0;
             // 
             // LblTitle
@@ -74,7 +74,7 @@
             this.LblTitle.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LblTitle.Location = new System.Drawing.Point(0, 0);
             this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(418, 74);
+            this.LblTitle.Size = new System.Drawing.Size(408, 74);
             this.LblTitle.TabIndex = 1;
             this.LblTitle.Text = "Авторизация";
             this.LblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -83,7 +83,7 @@
             // 
             this.PbxLogo.Dock = System.Windows.Forms.DockStyle.Right;
             this.PbxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbxLogo.Image")));
-            this.PbxLogo.Location = new System.Drawing.Point(418, 0);
+            this.PbxLogo.Location = new System.Drawing.Point(408, 0);
             this.PbxLogo.Name = "PbxLogo";
             this.PbxLogo.Size = new System.Drawing.Size(78, 74);
             this.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -175,6 +175,7 @@
             // LblRegestry
             // 
             this.LblRegestry.AutoSize = true;
+            this.LblRegestry.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LblRegestry.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LblRegestry.ForeColor = System.Drawing.Color.Blue;
             this.LblRegestry.Location = new System.Drawing.Point(187, 477);
@@ -182,6 +183,7 @@
             this.LblRegestry.Size = new System.Drawing.Size(108, 19);
             this.LblRegestry.TabIndex = 9;
             this.LblRegestry.Text = "Регистрация";
+            this.LblRegestry.Click += new System.EventHandler(this.LblRegestry_Click);
             // 
             // u37_1DataSet1
             // 
@@ -221,7 +223,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(496, 518);
+            this.ClientSize = new System.Drawing.Size(486, 518);
             this.Controls.Add(this.LblRegestry);
             this.Controls.Add(this.CbxShowPas);
             this.Controls.Add(this.BtnLogIn);

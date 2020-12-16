@@ -79,6 +79,7 @@ namespace СУБД_Марафон
                 {
                     FormBegun begun = new FormBegun();
                     this.Visible = false;
+                    begun.BsBegun.Filter = txtFilter;
                     begun.ShowDialog();
                     this.Visible = true;
 
@@ -123,6 +124,18 @@ namespace СУБД_Марафон
                 }
             }
 
+        }
+
+        private void LblRegestry_Click(object sender, EventArgs e)
+        {
+            FormRegestry regestry = new FormRegestry();
+            this.Visible = false;
+            regestry.ShowDialog();
+            this.Visible = true;
+
+            this.zritelsTableAdapter.Fill(this.u37_1DataSet1.Zritels);
+            this.begunTableAdapter.Fill(this.u37_1DataSet1.Begun);
+            this.sponsorTableAdapter.Fill(this.u37_1DataSet1.Sponsor);
         }
     }
 }

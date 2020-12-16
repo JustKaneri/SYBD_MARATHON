@@ -36,6 +36,9 @@
     <ApplicationIcon>service_logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DLL_Passw">
+      <HintPath>..\..\DLL_Passw\DLL_Passw\bin\Debug\DLL_Passw.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -61,6 +64,12 @@
     <Compile Include="FormLogIn.Designer.cs">
       <DependentUpon>FormLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRegestry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegestry.Designer.cs">
+      <DependentUpon>FormRegestry.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSponsor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogIn.resx">
       <DependentUpon>FormLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegestry.resx">
+      <DependentUpon>FormRegestry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSponsor.resx">
       <DependentUpon>FormSponsor.cs</DependentUpon>
