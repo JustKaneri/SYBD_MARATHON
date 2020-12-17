@@ -52,10 +52,10 @@ namespace СУБД_Марафон
                 {
                     FormZritel zritel = new FormZritel();
                     this.Visible = false;
-                    zritel.BsZritel.Filter = this.BsZritel.Filter;
+                    zritel.BsZritel.Filter = $"Login = '{TbxLogin.Text}'";
                     zritel.ShowDialog();
                     this.Visible = true;
-
+                    this.zritelsTableAdapter.Fill(this.u37_1DataSet1.Zritels);
                     TbxLogin.Clear();
                     TbxPass.Clear();
                     TbxLogin.Focus();
@@ -79,10 +79,10 @@ namespace СУБД_Марафон
                 {
                     FormBegun begun = new FormBegun();
                     this.Visible = false;
-                    begun.BsBegun.Filter = txtFilter;
+                    begun.BsBegun.Filter = $"Login = '{TbxLogin.Text}'";
                     begun.ShowDialog();
                     this.Visible = true;
-
+                    this.begunTableAdapter.Fill(this.u37_1DataSet1.Begun);
                     TbxLogin.Clear();
                     TbxPass.Clear();
                     TbxLogin.Focus();
@@ -106,10 +106,10 @@ namespace СУБД_Марафон
                 {
                     FormSponsor sponsor = new FormSponsor();
                     this.Visible = false;
-                    sponsor.BsSponsor.Filter = txtFilter;
+                    sponsor.BsSponsor.Filter = $"Login = '{TbxLogin.Text}'";
                     sponsor.ShowDialog();
                     this.Visible = true;
-
+                    this.sponsorTableAdapter.Fill(this.u37_1DataSet1.Sponsor);
                     TbxLogin.Clear();
                     TbxPass.Clear();
                     TbxLogin.Focus();

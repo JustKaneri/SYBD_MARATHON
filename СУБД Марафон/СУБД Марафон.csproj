@@ -64,6 +64,12 @@
     <Compile Include="FormLogIn.Designer.cs">
       <DependentUpon>FormLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProfileZritel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProfileZritel.Designer.cs">
+      <DependentUpon>FormProfileZritel.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegestry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogIn.resx">
       <DependentUpon>FormLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProfileZritel.resx">
+      <DependentUpon>FormProfileZritel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegestry.resx">
       <DependentUpon>FormRegestry.cs</DependentUpon>

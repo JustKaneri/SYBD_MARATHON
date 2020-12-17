@@ -735,6 +735,8 @@ SELECT IdZritel, Fam, Name, Oth, Login, Password, Email, phone FROM Zritels WHER
               <xs:element name="IdBegun" msprop:Generator_ColumnVarNameInTable="columnIdBegun" msprop:Generator_ColumnPropNameInRow="IdBegun" msprop:Generator_ColumnPropNameInTable="IdBegunColumn" msprop:Generator_UserColumnName="IdBegun" type="xs:int" minOccurs="0" />
               <xs:element name="IdMaraphon" msprop:Generator_ColumnVarNameInTable="columnIdMaraphon" msprop:Generator_ColumnPropNameInRow="IdMaraphon" msprop:Generator_ColumnPropNameInTable="IdMaraphonColumn" msprop:Generator_UserColumnName="IdMaraphon" type="xs:int" minOccurs="0" />
               <xs:element name="Result" msprop:Generator_ColumnVarNameInTable="columnResult" msprop:Generator_ColumnPropNameInRow="Result" msprop:Generator_ColumnPropNameInTable="ResultColumn" msprop:Generator_UserColumnName="Result" type="xs:double" minOccurs="0" />
+              <xs:element name="FamBegun" msdata:ReadOnly="true" msdata:Expression="Parent(FK_Sorevnovania_Begun).Fam" msprop:Generator_ColumnVarNameInTable="columnFamBegun" msprop:Generator_ColumnPropNameInRow="FamBegun" msprop:Generator_ColumnPropNameInTable="FamBegunColumn" msprop:Generator_UserColumnName="FamBegun" type="xs:string" minOccurs="0" />
+              <xs:element name="NameBegun" msdata:ReadOnly="true" msdata:Expression="Parent(FK_Sorevnovania_Begun).Name" msprop:Generator_ColumnVarNameInTable="columnNameBegun" msprop:Generator_ColumnPropNameInRow="NameBegun" msprop:Generator_ColumnPropNameInTable="NameBegunColumn" msprop:Generator_UserColumnName="NameBegun" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

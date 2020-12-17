@@ -404,7 +404,7 @@ namespace СУБД_Марафон {
             base.Tables.Add(this.tableInventarBegun);
             this.tableMaraphon = new MaraphonDataTable();
             base.Tables.Add(this.tableMaraphon);
-            this.tableSorevnovania = new SorevnovaniaDataTable();
+            this.tableSorevnovania = new SorevnovaniaDataTable(false);
             base.Tables.Add(this.tableSorevnovania);
             this.tableSponsor = new SponsorDataTable(false);
             base.Tables.Add(this.tableSponsor);
@@ -545,6 +545,8 @@ namespace СУБД_Марафон {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitExpressions() {
             this.Begun.FIOColumn.Expression = "Fam + \' \' + Name + \' \' + Oth";
+            this.Sorevnovania.FamBegunColumn.Expression = "Parent(FK_Sorevnovania_Begun).Fam";
+            this.Sorevnovania.NameBegunColumn.Expression = "Parent(FK_Sorevnovania_Begun).Name";
             this.Sponsor.FIOColumn.Expression = "Fam + \' \'+ Name + \' \'+ Oth ";
             this.Zritels.FIOColumn.Expression = "Fam + \' \' + Name + \' \'+ Oth";
         }
@@ -1951,12 +1953,25 @@ namespace СУБД_Марафон {
             
             private global::System.Data.DataColumn columnResult;
             
+            private global::System.Data.DataColumn columnFamBegun;
+            
+            private global::System.Data.DataColumn columnNameBegun;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public SorevnovaniaDataTable() {
+            public SorevnovaniaDataTable() : 
+                    this(false) {
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public SorevnovaniaDataTable(bool initExpressions) {
                 this.TableName = "Sorevnovania";
                 this.BeginInit();
                 this.InitClass();
+                if ((initExpressions == true)) {
+                    this.InitExpressions();
+                }
                 this.EndInit();
             }
             
@@ -2018,6 +2033,22 @@ namespace СУБД_Марафон {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FamBegunColumn {
+                get {
+                    return this.columnFamBegun;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn NameBegunColumn {
+                get {
+                    return this.columnNameBegun;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2053,13 +2084,37 @@ namespace СУБД_Марафон {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public SorevnovaniaRow AddSorevnovaniaRow(BegunRow parentBegunRowByFK_Sorevnovania_Begun, MaraphonRow parentMaraphonRowByFK_Sorevnovania_Maraphon, double Result, string FamBegun, string NameBegun) {
+                SorevnovaniaRow rowSorevnovaniaRow = ((SorevnovaniaRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        null,
+                        null,
+                        Result,
+                        FamBegun,
+                        NameBegun};
+                if ((parentBegunRowByFK_Sorevnovania_Begun != null)) {
+                    columnValuesArray[1] = parentBegunRowByFK_Sorevnovania_Begun[0];
+                }
+                if ((parentMaraphonRowByFK_Sorevnovania_Maraphon != null)) {
+                    columnValuesArray[2] = parentMaraphonRowByFK_Sorevnovania_Maraphon[0];
+                }
+                rowSorevnovaniaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSorevnovaniaRow);
+                return rowSorevnovaniaRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public SorevnovaniaRow AddSorevnovaniaRow(BegunRow parentBegunRowByFK_Sorevnovania_Begun, MaraphonRow parentMaraphonRowByFK_Sorevnovania_Maraphon, double Result) {
                 SorevnovaniaRow rowSorevnovaniaRow = ((SorevnovaniaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         null,
-                        Result};
+                        Result,
+                        null,
+                        null};
                 if ((parentBegunRowByFK_Sorevnovania_Begun != null)) {
                     columnValuesArray[1] = parentBegunRowByFK_Sorevnovania_Begun[0];
                 }
@@ -2099,6 +2154,8 @@ namespace СУБД_Марафон {
                 this.columnIdBegun = base.Columns["IdBegun"];
                 this.columnIdMaraphon = base.Columns["IdMaraphon"];
                 this.columnResult = base.Columns["Result"];
+                this.columnFamBegun = base.Columns["FamBegun"];
+                this.columnNameBegun = base.Columns["NameBegun"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2112,6 +2169,10 @@ namespace СУБД_Марафон {
                 base.Columns.Add(this.columnIdMaraphon);
                 this.columnResult = new global::System.Data.DataColumn("Result", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnResult);
+                this.columnFamBegun = new global::System.Data.DataColumn("FamBegun", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFamBegun);
+                this.columnNameBegun = new global::System.Data.DataColumn("NameBegun", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNameBegun);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIdSorevnovan}, true));
                 this.columnIdSorevnovan.AutoIncrement = true;
@@ -2119,6 +2180,8 @@ namespace СУБД_Марафон {
                 this.columnIdSorevnovan.AllowDBNull = false;
                 this.columnIdSorevnovan.ReadOnly = true;
                 this.columnIdSorevnovan.Unique = true;
+                this.columnFamBegun.ReadOnly = true;
+                this.columnNameBegun.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2137,6 +2200,13 @@ namespace СУБД_Марафон {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(SorevnovaniaRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitExpressions() {
+                this.FamBegunColumn.Expression = "Parent(FK_Sorevnovania_Begun).Fam";
+                this.NameBegunColumn.Expression = "Parent(FK_Sorevnovania_Begun).Name";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4203,6 +4273,38 @@ namespace СУБД_Марафон {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string FamBegun {
+                get {
+                    try {
+                        return ((string)(this[this.tableSorevnovania.FamBegunColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FamBegun\' in table \'Sorevnovania\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSorevnovania.FamBegunColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string NameBegun {
+                get {
+                    try {
+                        return ((string)(this[this.tableSorevnovania.NameBegunColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NameBegun\' in table \'Sorevnovania\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSorevnovania.NameBegunColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public BegunRow BegunRow {
                 get {
                     return ((BegunRow)(this.GetParentRow(this.Table.ParentRelations["FK_Sorevnovania_Begun"])));
@@ -4257,6 +4359,30 @@ namespace СУБД_Марафон {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetResultNull() {
                 this[this.tableSorevnovania.ResultColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFamBegunNull() {
+                return this.IsNull(this.tableSorevnovania.FamBegunColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFamBegunNull() {
+                this[this.tableSorevnovania.FamBegunColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsNameBegunNull() {
+                return this.IsNull(this.tableSorevnovania.NameBegunColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetNameBegunNull() {
+                this[this.tableSorevnovania.NameBegunColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -7239,7 +7365,7 @@ SELECT IdSorevnovan, IdBegun, IdMaraphon, Result FROM Sorevnovania WHERE (IdSore
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual u37_1DataSet.SorevnovaniaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            u37_1DataSet.SorevnovaniaDataTable dataTable = new u37_1DataSet.SorevnovaniaDataTable();
+            u37_1DataSet.SorevnovaniaDataTable dataTable = new u37_1DataSet.SorevnovaniaDataTable(true);
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

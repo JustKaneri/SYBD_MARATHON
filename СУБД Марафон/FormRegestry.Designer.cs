@@ -866,7 +866,7 @@
             // BtnDel
             // 
             this.BtnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(156)))), ((int)(((byte)(26)))));
-            this.BtnDel.Location = new System.Drawing.Point(560, 210);
+            this.BtnDel.Location = new System.Drawing.Point(560, 223);
             this.BtnDel.Name = "BtnDel";
             this.BtnDel.Size = new System.Drawing.Size(149, 45);
             this.BtnDel.TabIndex = 3;
