@@ -38,6 +38,7 @@
             this.begunTableAdapter = new СУБД_Марафон.u37_1DataSetTableAdapters.BegunTableAdapter();
             this.tableAdapterManager = new СУБД_Марафон.u37_1DataSetTableAdapters.TableAdapterManager();
             this.fIOLabel1 = new System.Windows.Forms.Label();
+            this.BtnProfBegun = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.u37_1DataSet1)).BeginInit();
@@ -115,12 +116,24 @@
             this.fIOLabel1.TabIndex = 2;
             this.fIOLabel1.Text = "label1";
             // 
+            // BtnProfBegun
+            // 
+            this.BtnProfBegun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(156)))), ((int)(((byte)(26)))));
+            this.BtnProfBegun.Location = new System.Drawing.Point(6, 91);
+            this.BtnProfBegun.Name = "BtnProfBegun";
+            this.BtnProfBegun.Size = new System.Drawing.Size(241, 39);
+            this.BtnProfBegun.TabIndex = 9;
+            this.BtnProfBegun.Text = "Профиль";
+            this.BtnProfBegun.UseVisualStyleBackColor = false;
+            this.BtnProfBegun.Click += new System.EventHandler(this.BtnProfBegun_Click);
+            // 
             // FormBegun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnProfBegun);
             this.Controls.Add(this.fIOLabel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -149,5 +162,6 @@
         private u37_1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Label fIOLabel1;
         public System.Windows.Forms.BindingSource BsBegun;
+        private System.Windows.Forms.Button BtnProfBegun;
     }
 }

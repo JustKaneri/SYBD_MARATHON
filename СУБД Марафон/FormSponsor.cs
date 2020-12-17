@@ -19,12 +19,19 @@ namespace СУБД_Марафон
 
         private void FormSponsor_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'u37_1DataSet1.Sponsor' table. You can move, or remove it, as needed.
-            this.sponsorTableAdapter.Fill(this.u37_1DataSet1.Sponsor);
+      
             // TODO: This line of code loads data into the 'u37_1DataSet1.Sponsor' table. You can move, or remove it, as needed.
             this.sponsorTableAdapter.Fill(this.u37_1DataSet1.Sponsor);
 
 
+        }
+
+        private void BtnProfSponsor_Click(object sender, EventArgs e)
+        {
+            FormProfilrSponsor profilrSponsor = new FormProfilrSponsor();
+            profilrSponsor.sponsorBindingSource.Filter = this.BsSponsor.Filter;
+            profilrSponsor.ShowDialog();
+            this.sponsorTableAdapter.Fill(this.u37_1DataSet1.Sponsor);
         }
     }
 }

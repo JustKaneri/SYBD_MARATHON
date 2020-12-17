@@ -23,5 +23,13 @@ namespace СУБД_Марафон
             this.begunTableAdapter.Fill(this.u37_1DataSet1.Begun);
 
         }
+
+        private void BtnProfBegun_Click(object sender, EventArgs e)
+        {
+            FormProfileBegun profileBegun = new FormProfileBegun();
+            profileBegun.begunBindingSource.Filter = this.BsBegun.Filter;
+            profileBegun.ShowDialog();
+            this.begunTableAdapter.Fill(this.u37_1DataSet1.Begun);
+        }
     }
 }
