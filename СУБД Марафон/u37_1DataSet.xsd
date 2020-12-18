@@ -56,7 +56,7 @@ SELECT IdBegun, Fam, Name, Oth, Login, Password, Gender, Bday, Strana, Summa, Ph
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT IdBegun, Fam, Name, Oth, Login, Password, Gender, Bday, Strana, Summa, Phono FROM dbo.Begun</CommandText>
+                    <CommandText>SELECT IdBegun, Fam, Name, Oth, Login, Password, Gender, Bday, Strana, Summa, Phono FROM Begun</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -684,6 +684,7 @@ SELECT IdZritel, Fam, Name, Oth, Login, Password, Email, phone FROM Zritels WHER
               <xs:element name="Summa" msprop:Generator_ColumnVarNameInTable="columnSumma" msprop:Generator_ColumnPropNameInRow="Summa" msprop:Generator_ColumnPropNameInTable="SummaColumn" msprop:Generator_UserColumnName="Summa" type="xs:decimal" minOccurs="0" />
               <xs:element name="Phono" msprop:Generator_ColumnVarNameInTable="columnPhono" msprop:Generator_ColumnPropNameInRow="Phono" msprop:Generator_ColumnPropNameInTable="PhonoColumn" msprop:Generator_UserColumnName="Phono" type="xs:base64Binary" minOccurs="0" />
               <xs:element name="FIO" msdata:ReadOnly="true" msdata:Expression="Fam + ' ' + Name + ' ' + Oth" msprop:Generator_ColumnVarNameInTable="columnFIO" msprop:Generator_ColumnPropNameInRow="FIO" msprop:Generator_ColumnPropNameInTable="FIOColumn" msprop:Generator_UserColumnName="FIO" type="xs:string" minOccurs="0" />
+              <xs:element name="FioInc" msdata:ReadOnly="true" msdata:Expression="Substring(Fam,0,1) + '.'+ Substring(Name,0,1) + '.'+ Substring(Oth,0,1)" msprop:Generator_ColumnVarNameInTable="columnFioInc" msprop:Generator_ColumnPropNameInRow="FioInc" msprop:Generator_ColumnPropNameInTable="FioIncColumn" msprop:Generator_UserColumnName="FioInc" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

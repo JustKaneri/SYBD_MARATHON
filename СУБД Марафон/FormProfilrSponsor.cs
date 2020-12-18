@@ -47,18 +47,17 @@ namespace СУБД_Марафон
                 return;
             }
 
-            //if (!Password.IsPasswordCorrect(passwordTextBox.Text))
-            //{
-            //    MessageBox.Show("Пароль не соответствует требованиям.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //    return;
-            //}
+            if (!Password.IsPasswordCorrect(passwordTextBox.Text))
+            {
+                MessageBox.Show("Пароль не соответствует требованиям.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
 
-            if(DataKorrect(MtbxSrok.Text))
+            if (DataKorrect(MtbxSrok.Text))
             {
                 MessageBox.Show("Не корректная дата", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-
 
             sponsorBindingSource.EndEdit();
             this.sponsorTableAdapter.Update(this.u37_1DataSet.Sponsor);

@@ -545,6 +545,7 @@ namespace СУБД_Марафон {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitExpressions() {
             this.Begun.FIOColumn.Expression = "Fam + \' \' + Name + \' \' + Oth";
+            this.Begun.FioIncColumn.Expression = "Substring(Fam,0,1) + \'.\'+ Substring(Name,0,1) + \'.\'+ Substring(Oth,0,1)";
             this.Sorevnovania.FamBegunColumn.Expression = "Parent(FK_Sorevnovania_Begun).Fam";
             this.Sorevnovania.NameBegunColumn.Expression = "Parent(FK_Sorevnovania_Begun).Name";
             this.Sponsor.FIOColumn.Expression = "Fam + \' \'+ Name + \' \'+ Oth ";
@@ -605,6 +606,8 @@ namespace СУБД_Марафон {
             private global::System.Data.DataColumn columnPhono;
             
             private global::System.Data.DataColumn columnFIO;
+            
+            private global::System.Data.DataColumn columnFioInc;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -746,6 +749,14 @@ namespace СУБД_Марафон {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FioIncColumn {
+                get {
+                    return this.columnFioInc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -781,7 +792,7 @@ namespace СУБД_Марафон {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public BegunRow AddBegunRow(string Fam, string Name, string Oth, string Login, string Password, string Gender, System.DateTime Bday, string Strana, decimal Summa, byte[] Phono, string FIO) {
+            public BegunRow AddBegunRow(string Fam, string Name, string Oth, string Login, string Password, string Gender, System.DateTime Bday, string Strana, decimal Summa, byte[] Phono, string FIO, string FioInc) {
                 BegunRow rowBegunRow = ((BegunRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -795,7 +806,8 @@ namespace СУБД_Марафон {
                         Strana,
                         Summa,
                         Phono,
-                        FIO};
+                        FIO,
+                        FioInc};
                 rowBegunRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBegunRow);
                 return rowBegunRow;
@@ -817,6 +829,7 @@ namespace СУБД_Марафон {
                         Strana,
                         Summa,
                         Phono,
+                        null,
                         null};
                 rowBegunRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBegunRow);
@@ -859,6 +872,7 @@ namespace СУБД_Марафон {
                 this.columnSumma = base.Columns["Summa"];
                 this.columnPhono = base.Columns["Phono"];
                 this.columnFIO = base.Columns["FIO"];
+                this.columnFioInc = base.Columns["FioInc"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -888,6 +902,8 @@ namespace СУБД_Марафон {
                 base.Columns.Add(this.columnPhono);
                 this.columnFIO = new global::System.Data.DataColumn("FIO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFIO);
+                this.columnFioInc = new global::System.Data.DataColumn("FioInc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFioInc);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIdBegun}, true));
                 this.columnIdBegun.AutoIncrement = true;
@@ -903,6 +919,7 @@ namespace СУБД_Марафон {
                 this.columnGender.MaxLength = 3;
                 this.columnStrana.MaxLength = 50;
                 this.columnFIO.ReadOnly = true;
+                this.columnFioInc.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -927,6 +944,7 @@ namespace СУБД_Марафон {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitExpressions() {
                 this.FIOColumn.Expression = "Fam + \' \' + Name + \' \' + Oth";
+                this.FioIncColumn.Expression = "Substring(Fam,0,1) + \'.\'+ Substring(Name,0,1) + \'.\'+ Substring(Oth,0,1)";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3688,6 +3706,22 @@ namespace СУБД_Марафон {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string FioInc {
+                get {
+                    try {
+                        return ((string)(this[this.tableBegun.FioIncColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FioInc\' in table \'Begun\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBegun.FioIncColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsFamNull() {
                 return this.IsNull(this.tableBegun.FamColumn);
             }
@@ -3816,6 +3850,18 @@ namespace СУБД_Марафон {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetFIONull() {
                 this[this.tableBegun.FIOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFioIncNull() {
+                return this.IsNull(this.tableBegun.FioIncColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFioIncNull() {
+                this[this.tableBegun.FioIncColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5583,7 +5629,7 @@ SELECT IdBegun, Fam, Name, Oth, Login, Password, Gender, Bday, Strana, Summa, Ph
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT IdBegun, Fam, Name, Oth, Login, Password, Gender, Bday, Strana, Summa, Pho" +
-                "no FROM dbo.Begun";
+                "no FROM Begun";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
