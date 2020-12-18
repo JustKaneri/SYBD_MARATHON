@@ -545,7 +545,7 @@ namespace СУБД_Марафон {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitExpressions() {
             this.Begun.FIOColumn.Expression = "Fam + \' \' + Name + \' \' + Oth";
-            this.Begun.FioIncColumn.Expression = "Substring(Fam,0,1) + \'.\'+ Substring(Name,0,1) + \'.\'+ Substring(Oth,0,1)";
+            this.Begun.FioIncColumn.Expression = "Fam + \' \'+ Substring(Name,1,1) + \'.\'+ Substring(Oth,1,1)";
             this.Sorevnovania.FamBegunColumn.Expression = "Parent(FK_Sorevnovania_Begun).Fam";
             this.Sorevnovania.NameBegunColumn.Expression = "Parent(FK_Sorevnovania_Begun).Name";
             this.Sponsor.FIOColumn.Expression = "Fam + \' \'+ Name + \' \'+ Oth ";
@@ -944,7 +944,7 @@ namespace СУБД_Марафон {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitExpressions() {
                 this.FIOColumn.Expression = "Fam + \' \' + Name + \' \' + Oth";
-                this.FioIncColumn.Expression = "Substring(Fam,0,1) + \'.\'+ Substring(Name,0,1) + \'.\'+ Substring(Oth,0,1)";
+                this.FioIncColumn.Expression = "Fam + \' \'+ Substring(Name,1,1) + \'.\'+ Substring(Oth,1,1)";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
