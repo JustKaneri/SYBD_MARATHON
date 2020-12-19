@@ -46,7 +46,7 @@ namespace СУБД_Марафон
 
             if (!IsDataKart(MtbSrok.Text))
             {
-                MessageBox.Show("Пополнение счета не возможно, срок годности карты истек");
+                MessageBox.Show("Пополнение счета не возможно, срок годности карты истек","Внимание",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -71,7 +71,8 @@ namespace СУБД_Марафон
             DateTime dt = Convert.ToDateTime(data);
 
             dt = dt.AddDays(30);
-            
+            //Разность даты.
+            //TimeSpan ts = DateTime.Now - dt;
             return dt > DateTime.Now;
         }
 
@@ -130,7 +131,7 @@ namespace СУБД_Марафон
             
             if(summSponsora < summAdd)
             {
-                MessageBox.Show("Не достаточно средств");
+                MessageBox.Show("Не достаточно средств", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 TbxTakeSum.Clear();
                 return;
             }
