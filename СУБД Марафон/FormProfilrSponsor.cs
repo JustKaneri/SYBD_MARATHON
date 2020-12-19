@@ -74,7 +74,6 @@ namespace СУБД_Марафон
         {
             int MM = Convert.ToInt32(data.Substring(0, 2));
             return (MM > 12 || MM == 0);
-
         }
 
         private void kartaNumTextBox_KeyPress(object sender, KeyPressEventArgs e)

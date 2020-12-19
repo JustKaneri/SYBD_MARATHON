@@ -254,6 +254,7 @@
             // 
             this.genderTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.begunBindingSource, "Gender", true));
             this.genderTextBox.Location = new System.Drawing.Point(150, 325);
+            this.genderTextBox.MaxLength = 3;
             this.genderTextBox.Name = "genderTextBox";
             this.genderTextBox.Size = new System.Drawing.Size(200, 25);
             this.genderTextBox.TabIndex = 12;
@@ -312,7 +313,7 @@
             // BtnSave
             // 
             this.BtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(156)))), ((int)(((byte)(26)))));
-            this.BtnSave.Location = new System.Drawing.Point(261, 519);
+            this.BtnSave.Location = new System.Drawing.Point(265, 519);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(170, 52);
             this.BtnSave.TabIndex = 24;

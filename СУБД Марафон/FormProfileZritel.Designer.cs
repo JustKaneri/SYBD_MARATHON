@@ -77,7 +77,7 @@
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(39, 176);
+            nameLabel.Location = new System.Drawing.Point(39, 161);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(40, 19);
             nameLabel.TabIndex = 3;
@@ -86,7 +86,7 @@
             // othLabel
             // 
             othLabel.AutoSize = true;
-            othLabel.Location = new System.Drawing.Point(39, 240);
+            othLabel.Location = new System.Drawing.Point(39, 217);
             othLabel.Name = "othLabel";
             othLabel.Size = new System.Drawing.Size(73, 19);
             othLabel.TabIndex = 5;
@@ -95,7 +95,7 @@
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Location = new System.Drawing.Point(41, 293);
+            passwordLabel.Location = new System.Drawing.Point(39, 272);
             passwordLabel.Name = "passwordLabel";
             passwordLabel.Size = new System.Drawing.Size(352, 19);
             passwordLabel.TabIndex = 7;
@@ -113,7 +113,7 @@
             // phoneLabel
             // 
             phoneLabel.AutoSize = true;
-            phoneLabel.Location = new System.Drawing.Point(430, 171);
+            phoneLabel.Location = new System.Drawing.Point(430, 164);
             phoneLabel.Name = "phoneLabel";
             phoneLabel.Size = new System.Drawing.Size(67, 19);
             phoneLabel.TabIndex = 11;
@@ -127,7 +127,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(849, 62);
+            this.panel1.Size = new System.Drawing.Size(753, 62);
             this.panel1.TabIndex = 2;
             // 
             // LblTitle
@@ -136,7 +136,7 @@
             this.LblTitle.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LblTitle.Location = new System.Drawing.Point(0, 0);
             this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(771, 62);
+            this.LblTitle.Size = new System.Drawing.Size(675, 62);
             this.LblTitle.TabIndex = 1;
             this.LblTitle.Text = "Профиль зрителя";
             this.LblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -145,7 +145,7 @@
             // 
             this.PbxLogo.Dock = System.Windows.Forms.DockStyle.Right;
             this.PbxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbxLogo.Image")));
-            this.PbxLogo.Location = new System.Drawing.Point(771, 0);
+            this.PbxLogo.Location = new System.Drawing.Point(675, 0);
             this.PbxLogo.Name = "PbxLogo";
             this.PbxLogo.Size = new System.Drawing.Size(78, 62);
             this.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -192,7 +192,7 @@
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BsZritel, "Name", true));
             this.nameTextBox.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTextBox.Location = new System.Drawing.Point(135, 179);
+            this.nameTextBox.Location = new System.Drawing.Point(135, 164);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(176, 27);
             this.nameTextBox.TabIndex = 4;
@@ -201,7 +201,7 @@
             // 
             this.othTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BsZritel, "Oth", true));
             this.othTextBox.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.othTextBox.Location = new System.Drawing.Point(135, 240);
+            this.othTextBox.Location = new System.Drawing.Point(135, 217);
             this.othTextBox.Name = "othTextBox";
             this.othTextBox.Size = new System.Drawing.Size(176, 27);
             this.othTextBox.TabIndex = 6;
@@ -210,7 +210,7 @@
             // 
             this.PassTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BsZritel, "Password", true));
             this.PassTextBox.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PassTextBox.Location = new System.Drawing.Point(543, 225);
+            this.PassTextBox.Location = new System.Drawing.Point(543, 217);
             this.PassTextBox.Name = "PassTextBox";
             this.PassTextBox.Size = new System.Drawing.Size(200, 27);
             this.PassTextBox.TabIndex = 8;
@@ -229,14 +229,14 @@
             // 
             this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BsZritel, "phone", true));
             this.phoneTextBox.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneTextBox.Location = new System.Drawing.Point(543, 168);
+            this.phoneTextBox.Location = new System.Drawing.Point(543, 161);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(200, 27);
             this.phoneTextBox.TabIndex = 12;
             // 
             // TbxOldPass
             // 
-            this.TbxOldPass.Location = new System.Drawing.Point(170, 325);
+            this.TbxOldPass.Location = new System.Drawing.Point(168, 304);
             this.TbxOldPass.Name = "TbxOldPass";
             this.TbxOldPass.Size = new System.Drawing.Size(223, 25);
             this.TbxOldPass.TabIndex = 13;
@@ -245,7 +245,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(430, 225);
+            this.label1.Location = new System.Drawing.Point(430, 217);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 19);
             this.label1.TabIndex = 14;
@@ -255,7 +255,7 @@
             // 
             this.BtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(156)))), ((int)(((byte)(26)))));
             this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnCancel.Location = new System.Drawing.Point(658, 379);
+            this.BtnCancel.Location = new System.Drawing.Point(573, 346);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(170, 52);
             this.BtnCancel.TabIndex = 15;
@@ -265,7 +265,7 @@
             // BtnSave
             // 
             this.BtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(156)))), ((int)(((byte)(26)))));
-            this.BtnSave.Location = new System.Drawing.Point(482, 379);
+            this.BtnSave.Location = new System.Drawing.Point(397, 346);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(170, 52);
             this.BtnSave.TabIndex = 16;
@@ -280,7 +280,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.BtnCancel;
-            this.ClientSize = new System.Drawing.Size(849, 443);
+            this.ClientSize = new System.Drawing.Size(753, 406);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.label1);
