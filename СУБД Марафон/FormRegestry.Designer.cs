@@ -74,12 +74,13 @@
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.famTextBox = new System.Windows.Forms.TextBox();
             this.PageSponsor = new System.Windows.Forms.TabPage();
+            this.TbxSrok = new System.Windows.Forms.MaskedTextBox();
+            this.BsSponsor = new System.Windows.Forms.BindingSource(this.components);
             this.CbxShowPassSpon = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TbxRepPassSpon = new System.Windows.Forms.TextBox();
             this.BtnRegSpon = new System.Windows.Forms.Button();
             this.passwordSpons = new System.Windows.Forms.TextBox();
-            this.BsSponsor = new System.Windows.Forms.BindingSource(this.components);
             this.loginTextBox2 = new System.Windows.Forms.TextBox();
             this.summaTextBox1 = new System.Windows.Forms.TextBox();
             this.kartaCVVTextBox = new System.Windows.Forms.TextBox();
@@ -110,7 +111,6 @@
             this.begunTableAdapter = new СУБД_Марафон.u37_1DataSetTableAdapters.BegunTableAdapter();
             this.tableAdapterManager = new СУБД_Марафон.u37_1DataSetTableAdapters.TableAdapterManager();
             this.OpenImage = new System.Windows.Forms.OpenFileDialog();
-            this.TbxSrok = new System.Windows.Forms.MaskedTextBox();
             famLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             othLabel = new System.Windows.Forms.Label();
@@ -595,6 +595,21 @@
             this.PageSponsor.Text = "Регистрация спонсора";
             this.PageSponsor.UseVisualStyleBackColor = true;
             // 
+            // TbxSrok
+            // 
+            this.TbxSrok.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BsSponsor, "Scrok", true));
+            this.TbxSrok.Location = new System.Drawing.Point(119, 242);
+            this.TbxSrok.Mask = "00\\/00";
+            this.TbxSrok.Name = "TbxSrok";
+            this.TbxSrok.Size = new System.Drawing.Size(103, 25);
+            this.TbxSrok.TabIndex = 34;
+            this.TbxSrok.ValidatingType = typeof(System.DateTime);
+            // 
+            // BsSponsor
+            // 
+            this.BsSponsor.DataMember = "Sponsor";
+            this.BsSponsor.DataSource = this.u37_1DataSet1;
+            // 
             // CbxShowPassSpon
             // 
             this.CbxShowPassSpon.AutoSize = true;
@@ -642,11 +657,6 @@
             this.passwordSpons.Size = new System.Drawing.Size(100, 25);
             this.passwordSpons.TabIndex = 17;
             this.passwordSpons.UseSystemPasswordChar = true;
-            // 
-            // BsSponsor
-            // 
-            this.BsSponsor.DataMember = "Sponsor";
-            this.BsSponsor.DataSource = this.u37_1DataSet1;
             // 
             // loginTextBox2
             // 
@@ -923,16 +933,6 @@
             this.tableAdapterManager.SponsorTableAdapter = this.sponsorTableAdapter;
             this.tableAdapterManager.UpdateOrder = СУБД_Марафон.u37_1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.ZritelsTableAdapter = this.zritelsTableAdapter;
-            // 
-            // TbxSrok
-            // 
-            this.TbxSrok.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BsSponsor, "Scrok", true));
-            this.TbxSrok.Location = new System.Drawing.Point(119, 242);
-            this.TbxSrok.Mask = "00\\/00";
-            this.TbxSrok.Name = "TbxSrok";
-            this.TbxSrok.Size = new System.Drawing.Size(103, 25);
-            this.TbxSrok.TabIndex = 34;
-            this.TbxSrok.ValidatingType = typeof(System.DateTime);
             // 
             // FormRegestry
             // 

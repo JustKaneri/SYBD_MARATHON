@@ -312,5 +312,7 @@ namespace СУБД_Марафон
             if (!summaTextBox1.Text.Contains(",") && e.KeyChar == ',' && !summaTextBox1.Text.StartsWith(","))
                 e.Handled = false;
         }
+
+     
     }
 }
