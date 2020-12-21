@@ -65,6 +65,8 @@
             this.BtnRegZritel = new System.Windows.Forms.Button();
             this.TbxReplPass = new System.Windows.Forms.TextBox();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.BsZritel = new System.Windows.Forms.BindingSource(this.components);
+            this.u37_1DataSet1 = new СУБД_Марафон.u37_1DataSet();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.loginTextBox = new System.Windows.Forms.TextBox();
@@ -73,6 +75,7 @@
             this.famTextBox = new System.Windows.Forms.TextBox();
             this.PageSponsor = new System.Windows.Forms.TabPage();
             this.TbxSrok = new System.Windows.Forms.MaskedTextBox();
+            this.BsSponsor = new System.Windows.Forms.BindingSource(this.components);
             this.CbxShowPassSpon = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TbxRepPassSpon = new System.Windows.Forms.TextBox();
@@ -90,6 +93,7 @@
             this.LblRepPas = new System.Windows.Forms.Label();
             this.TbxPas = new System.Windows.Forms.TextBox();
             this.summaTextBox = new System.Windows.Forms.TextBox();
+            this.BsBegun = new System.Windows.Forms.BindingSource(this.components);
             this.stranaTextBox = new System.Windows.Forms.TextBox();
             this.bdayDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.genderTextBox = new System.Windows.Forms.TextBox();
@@ -103,10 +107,6 @@
             this.BtnAdd = new System.Windows.Forms.Button();
             this.phonoPictureBox = new System.Windows.Forms.PictureBox();
             this.OpenImage = new System.Windows.Forms.OpenFileDialog();
-            this.BsZritel = new System.Windows.Forms.BindingSource(this.components);
-            this.u37_1DataSet1 = new СУБД_Марафон.u37_1DataSet();
-            this.BsSponsor = new System.Windows.Forms.BindingSource(this.components);
-            this.BsBegun = new System.Windows.Forms.BindingSource(this.components);
             this.zritelsTableAdapter = new СУБД_Марафон.u37_1DataSetTableAdapters.ZritelsTableAdapter();
             this.sponsorTableAdapter = new СУБД_Марафон.u37_1DataSetTableAdapters.SponsorTableAdapter();
             this.begunTableAdapter = new СУБД_Марафон.u37_1DataSetTableAdapters.BegunTableAdapter();
@@ -141,13 +141,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).BeginInit();
             this.TbRegestry.SuspendLayout();
             this.PageZritel.SuspendLayout();
-            this.PageSponsor.SuspendLayout();
-            this.PageBegun.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.phonoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BsZritel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.u37_1DataSet1)).BeginInit();
+            this.PageSponsor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BsSponsor)).BeginInit();
+            this.PageBegun.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BsBegun)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // famLabel
@@ -497,6 +497,16 @@
             this.phoneTextBox.Size = new System.Drawing.Size(230, 27);
             this.phoneTextBox.TabIndex = 13;
             // 
+            // BsZritel
+            // 
+            this.BsZritel.DataMember = "Zritels";
+            this.BsZritel.DataSource = this.u37_1DataSet1;
+            // 
+            // u37_1DataSet1
+            // 
+            this.u37_1DataSet1.DataSetName = "u37_1DataSet";
+            this.u37_1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BsZritel, "Email", true));
@@ -594,6 +604,11 @@
             this.TbxSrok.Size = new System.Drawing.Size(103, 25);
             this.TbxSrok.TabIndex = 34;
             this.TbxSrok.ValidatingType = typeof(System.DateTime);
+            // 
+            // BsSponsor
+            // 
+            this.BsSponsor.DataMember = "Sponsor";
+            this.BsSponsor.DataSource = this.u37_1DataSet1;
             // 
             // CbxShowPassSpon
             // 
@@ -777,6 +792,11 @@
             this.summaTextBox.TabIndex = 26;
             this.summaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.summaTextBox_KeyPress);
             // 
+            // BsBegun
+            // 
+            this.BsBegun.DataMember = "Begun";
+            this.BsBegun.DataSource = this.u37_1DataSet1;
+            // 
             // stranaTextBox
             // 
             this.stranaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BsBegun, "Strana", true));
@@ -890,26 +910,6 @@
             this.phonoPictureBox.TabIndex = 1;
             this.phonoPictureBox.TabStop = false;
             // 
-            // BsZritel
-            // 
-            this.BsZritel.DataMember = "Zritels";
-            this.BsZritel.DataSource = this.u37_1DataSet1;
-            // 
-            // u37_1DataSet1
-            // 
-            this.u37_1DataSet1.DataSetName = "u37_1DataSet";
-            this.u37_1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // BsSponsor
-            // 
-            this.BsSponsor.DataMember = "Sponsor";
-            this.BsSponsor.DataSource = this.u37_1DataSet1;
-            // 
-            // BsBegun
-            // 
-            this.BsBegun.DataMember = "Begun";
-            this.BsBegun.DataSource = this.u37_1DataSet1;
-            // 
             // zritelsTableAdapter
             // 
             this.zritelsTableAdapter.ClearBeforeFill = true;
@@ -946,6 +946,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormRegestry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "СУБД Марафон";
@@ -955,15 +956,15 @@
             this.TbRegestry.ResumeLayout(false);
             this.PageZritel.ResumeLayout(false);
             this.PageZritel.PerformLayout();
-            this.PageSponsor.ResumeLayout(false);
-            this.PageSponsor.PerformLayout();
-            this.PageBegun.ResumeLayout(false);
-            this.PageBegun.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.phonoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BsZritel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.u37_1DataSet1)).EndInit();
+            this.PageSponsor.ResumeLayout(false);
+            this.PageSponsor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BsSponsor)).EndInit();
+            this.PageBegun.ResumeLayout(false);
+            this.PageBegun.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BsBegun)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phonoPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
