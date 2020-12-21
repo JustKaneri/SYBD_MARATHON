@@ -15,7 +15,7 @@ namespace СУБД_Марафон
         /// <summary>
         /// Строка подключения.
         /// </summary>
-        public const string TxtCon = @"Data Source=213.155.192.79,3002;Initial Catalog=u37_1;Persist Security Info=True;User ID=u37_1;Password=fda2";
+        public const string TxtCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\u37_1.mdf;Integrated Security=True;Connect Timeout=30";
 
         public FormLogIn()
         {

@@ -38,8 +38,14 @@
             this.u37_1DataSet1 = new СУБД_Марафон.u37_1DataSet();
             this.BtnProfZritel = new System.Windows.Forms.Button();
             this.DgvMaraphon = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dlinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BsMaraphon = new System.Windows.Forms.BindingSource(this.components);
             this.DgvBegun = new System.Windows.Forms.DataGridView();
+            this.idBegunDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FamBegun = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameBegun = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BsSorevnovan = new System.Windows.Forms.BindingSource(this.components);
             this.zritelsTableAdapter = new СУБД_Марафон.u37_1DataSetTableAdapters.ZritelsTableAdapter();
             this.tableAdapterManager = new СУБД_Марафон.u37_1DataSetTableAdapters.TableAdapterManager();
@@ -55,12 +61,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TbxFind = new System.Windows.Forms.TextBox();
             this.CmbxFind = new System.Windows.Forms.ComboBox();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dlinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idBegunDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FamBegun = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameBegun = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BsZritel)).BeginInit();
@@ -81,7 +84,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(626, 62);
+            this.panel1.Size = new System.Drawing.Size(1044, 62);
             this.panel1.TabIndex = 1;
             // 
             // LblTitle
@@ -90,7 +93,7 @@
             this.LblTitle.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LblTitle.Location = new System.Drawing.Point(0, 0);
             this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(548, 62);
+            this.LblTitle.Size = new System.Drawing.Size(966, 62);
             this.LblTitle.TabIndex = 1;
             this.LblTitle.Text = "Рабочее место зрителя";
             this.LblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -99,7 +102,7 @@
             // 
             this.PbxLogo.Dock = System.Windows.Forms.DockStyle.Right;
             this.PbxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbxLogo.Image")));
-            this.PbxLogo.Location = new System.Drawing.Point(548, 0);
+            this.PbxLogo.Location = new System.Drawing.Point(966, 0);
             this.PbxLogo.Name = "PbxLogo";
             this.PbxLogo.Size = new System.Drawing.Size(78, 62);
             this.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -151,14 +154,37 @@
             this.dlinaDataGridViewTextBoxColumn,
             this.dataDataGridViewTextBoxColumn});
             this.DgvMaraphon.DataSource = this.BsMaraphon;
-            this.DgvMaraphon.Location = new System.Drawing.Point(43, 162);
+            this.DgvMaraphon.Location = new System.Drawing.Point(28, 176);
             this.DgvMaraphon.MultiSelect = false;
             this.DgvMaraphon.Name = "DgvMaraphon";
             this.DgvMaraphon.ReadOnly = true;
             this.DgvMaraphon.RowTemplate.Height = 27;
             this.DgvMaraphon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvMaraphon.Size = new System.Drawing.Size(528, 168);
+            this.DgvMaraphon.Size = new System.Drawing.Size(528, 370);
             this.DgvMaraphon.TabIndex = 9;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Название";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // dlinaDataGridViewTextBoxColumn
+            // 
+            this.dlinaDataGridViewTextBoxColumn.DataPropertyName = "Dlina";
+            this.dlinaDataGridViewTextBoxColumn.HeaderText = "Длина";
+            this.dlinaDataGridViewTextBoxColumn.Name = "dlinaDataGridViewTextBoxColumn";
+            this.dlinaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataDataGridViewTextBoxColumn
+            // 
+            this.dataDataGridViewTextBoxColumn.DataPropertyName = "Data";
+            this.dataDataGridViewTextBoxColumn.HeaderText = "Дата организации";
+            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
+            this.dataDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataDataGridViewTextBoxColumn.Width = 130;
             // 
             // BsMaraphon
             // 
@@ -178,7 +204,7 @@
             this.FamBegun,
             this.NameBegun});
             this.DgvBegun.DataSource = this.BsSorevnovan;
-            this.DgvBegun.Location = new System.Drawing.Point(77, 350);
+            this.DgvBegun.Location = new System.Drawing.Point(578, 176);
             this.DgvBegun.MultiSelect = false;
             this.DgvBegun.Name = "DgvBegun";
             this.DgvBegun.ReadOnly = true;
@@ -187,6 +213,30 @@
             this.DgvBegun.Size = new System.Drawing.Size(459, 150);
             this.DgvBegun.TabIndex = 10;
             this.DgvBegun.SelectionChanged += new System.EventHandler(this.DgvBegun_SelectionChanged);
+            // 
+            // idBegunDataGridViewTextBoxColumn
+            // 
+            this.idBegunDataGridViewTextBoxColumn.DataPropertyName = "IdBegun";
+            this.idBegunDataGridViewTextBoxColumn.HeaderText = "IdBegun";
+            this.idBegunDataGridViewTextBoxColumn.Name = "idBegunDataGridViewTextBoxColumn";
+            this.idBegunDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idBegunDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // FamBegun
+            // 
+            this.FamBegun.DataPropertyName = "FamBegun";
+            this.FamBegun.HeaderText = "Фамилия спортсмена";
+            this.FamBegun.Name = "FamBegun";
+            this.FamBegun.ReadOnly = true;
+            this.FamBegun.Width = 150;
+            // 
+            // NameBegun
+            // 
+            this.NameBegun.DataPropertyName = "NameBegun";
+            this.NameBegun.HeaderText = "Имя спортсмена";
+            this.NameBegun.Name = "NameBegun";
+            this.NameBegun.ReadOnly = true;
+            this.NameBegun.Width = 150;
             // 
             // BsSorevnovan
             // 
@@ -238,13 +288,13 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.DgvSponsor.Location = new System.Drawing.Point(110, 546);
+            this.DgvSponsor.Location = new System.Drawing.Point(578, 396);
             this.DgvSponsor.MultiSelect = false;
             this.DgvSponsor.Name = "DgvSponsor";
             this.DgvSponsor.ReadOnly = true;
             this.DgvSponsor.RowTemplate.Height = 27;
             this.DgvSponsor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvSponsor.Size = new System.Drawing.Size(401, 150);
+            this.DgvSponsor.Size = new System.Drawing.Size(454, 150);
             this.DgvSponsor.TabIndex = 11;
             // 
             // Column1
@@ -268,7 +318,7 @@
             // LblSum
             // 
             this.LblSum.AutoSize = true;
-            this.LblSum.Location = new System.Drawing.Point(73, 503);
+            this.LblSum.Location = new System.Drawing.Point(583, 329);
             this.LblSum.Name = "LblSum";
             this.LblSum.Size = new System.Drawing.Size(153, 19);
             this.LblSum.TabIndex = 12;
@@ -305,59 +355,42 @@
             this.CmbxFind.TabIndex = 15;
             this.CmbxFind.SelectedIndexChanged += new System.EventHandler(this.TbxFind_TextChanged);
             // 
-            // nameDataGridViewTextBoxColumn
+            // label2
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Название";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 150;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(43, 151);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 19);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Марафоны:";
             // 
-            // dlinaDataGridViewTextBoxColumn
+            // label3
             // 
-            this.dlinaDataGridViewTextBoxColumn.DataPropertyName = "Dlina";
-            this.dlinaDataGridViewTextBoxColumn.HeaderText = "Длина";
-            this.dlinaDataGridViewTextBoxColumn.Name = "dlinaDataGridViewTextBoxColumn";
-            this.dlinaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(574, 154);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 19);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Спортсмены:";
             // 
-            // dataDataGridViewTextBoxColumn
+            // label4
             // 
-            this.dataDataGridViewTextBoxColumn.DataPropertyName = "Data";
-            this.dataDataGridViewTextBoxColumn.HeaderText = "Дата организации";
-            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
-            this.dataDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dataDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // idBegunDataGridViewTextBoxColumn
-            // 
-            this.idBegunDataGridViewTextBoxColumn.DataPropertyName = "IdBegun";
-            this.idBegunDataGridViewTextBoxColumn.HeaderText = "IdBegun";
-            this.idBegunDataGridViewTextBoxColumn.Name = "idBegunDataGridViewTextBoxColumn";
-            this.idBegunDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idBegunDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // FamBegun
-            // 
-            this.FamBegun.DataPropertyName = "FamBegun";
-            this.FamBegun.HeaderText = "Фамилия спортсмена";
-            this.FamBegun.Name = "FamBegun";
-            this.FamBegun.ReadOnly = true;
-            this.FamBegun.Width = 150;
-            // 
-            // NameBegun
-            // 
-            this.NameBegun.DataPropertyName = "NameBegun";
-            this.NameBegun.HeaderText = "Имя спортсмена";
-            this.NameBegun.Name = "NameBegun";
-            this.NameBegun.ReadOnly = true;
-            this.NameBegun.Width = 150;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(583, 374);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 19);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Спонсоры:";
             // 
             // FormZritel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(626, 727);
+            this.ClientSize = new System.Drawing.Size(1044, 573);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.CmbxFind);
             this.Controls.Add(this.TbxFind);
             this.Controls.Add(this.label1);
@@ -423,5 +456,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idBegunDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn FamBegun;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameBegun;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -26,8 +26,8 @@ namespace СУБД_Марафон.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=213.155.192.79,3002;Initial Catalog=u37_1;Persist Security Info=True;" +
-            "User ID=u37_1;Password=fda2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\u37_1.mdf;Int" +
+            "egrated Security=True;Connect Timeout=30\n")]
         public string u37_1ConnectionString {
             get {
                 return ((string)(this["u37_1ConnectionString"]));
