@@ -174,5 +174,7 @@ namespace СУБД_Марафон
             if (!TbxTakeSum.Text.Contains(",") && e.KeyChar == ',' && !TbxTakeSum.Text.StartsWith(","))
                 e.Handled = false;
         }
+
+       
     }
 }
