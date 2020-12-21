@@ -313,6 +313,16 @@ namespace СУБД_Марафон
                 e.Handled = false;
         }
 
-     
+        private void summaTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+                e.Handled = true;
+
+            if (Keys.Back == (Keys)e.KeyChar)
+                e.Handled = false;
+
+            if (!summaTextBox1.Text.Contains(",") && e.KeyChar == ',' && !summaTextBox1.Text.StartsWith(","))
+                e.Handled = false;
+        }
     }
 }

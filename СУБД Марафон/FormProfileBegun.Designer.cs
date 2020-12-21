@@ -165,7 +165,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(627, 58);
+            this.panel1.Size = new System.Drawing.Size(599, 58);
             this.panel1.TabIndex = 2;
             // 
             // LblTitle
@@ -174,7 +174,7 @@
             this.LblTitle.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LblTitle.Location = new System.Drawing.Point(0, 0);
             this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(549, 58);
+            this.LblTitle.Size = new System.Drawing.Size(521, 58);
             this.LblTitle.TabIndex = 1;
             this.LblTitle.Text = "Профиль спортсмена";
             this.LblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -183,7 +183,7 @@
             // 
             this.PbxLogo.Dock = System.Windows.Forms.DockStyle.Right;
             this.PbxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbxLogo.Image")));
-            this.PbxLogo.Location = new System.Drawing.Point(549, 0);
+            this.PbxLogo.Location = new System.Drawing.Point(521, 0);
             this.PbxLogo.Name = "PbxLogo";
             this.PbxLogo.Size = new System.Drawing.Size(78, 58);
             this.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -291,7 +291,7 @@
             // BtnAddPhoto
             // 
             this.BtnAddPhoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(156)))), ((int)(((byte)(26)))));
-            this.BtnAddPhoto.Location = new System.Drawing.Point(444, 223);
+            this.BtnAddPhoto.Location = new System.Drawing.Point(428, 219);
             this.BtnAddPhoto.Name = "BtnAddPhoto";
             this.BtnAddPhoto.Size = new System.Drawing.Size(167, 39);
             this.BtnAddPhoto.TabIndex = 19;
@@ -302,7 +302,7 @@
             // BtnDelPhoto
             // 
             this.BtnDelPhoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(156)))), ((int)(((byte)(26)))));
-            this.BtnDelPhoto.Location = new System.Drawing.Point(444, 283);
+            this.BtnDelPhoto.Location = new System.Drawing.Point(428, 283);
             this.BtnDelPhoto.Name = "BtnDelPhoto";
             this.BtnDelPhoto.Size = new System.Drawing.Size(167, 38);
             this.BtnDelPhoto.TabIndex = 20;
@@ -313,7 +313,7 @@
             // BtnSave
             // 
             this.BtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(156)))), ((int)(((byte)(26)))));
-            this.BtnSave.Location = new System.Drawing.Point(265, 519);
+            this.BtnSave.Location = new System.Drawing.Point(237, 519);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(170, 52);
             this.BtnSave.TabIndex = 24;
@@ -325,7 +325,7 @@
             // 
             this.BtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(156)))), ((int)(((byte)(26)))));
             this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnCancel.Location = new System.Drawing.Point(441, 519);
+            this.BtnCancel.Location = new System.Drawing.Point(413, 519);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(170, 52);
             this.BtnCancel.TabIndex = 23;
@@ -345,7 +345,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(627, 583);
+            this.ClientSize = new System.Drawing.Size(599, 583);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.TbxOldPass);
