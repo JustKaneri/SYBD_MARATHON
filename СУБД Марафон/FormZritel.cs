@@ -101,7 +101,7 @@ namespace СУБД_Марафон
                 {
                     string Mar = DgvBegun.Rows[i].Cells[1].Value.ToString();
 
-                    if (Mar.StartsWith(TbxFind.Text))
+                    if (Mar.ToLower().StartsWith(TbxFind.Text.ToLower()))
                     {
                         DgvBegun.CurrentCell = DgvBegun.Rows[i].Cells[1];
                         DgvBegun.Rows[i].Selected = true;

@@ -90,7 +90,7 @@ namespace СУБД_Марафон
             }
 
             var res = MessageBox.Show("Вы хотите отменить запись на текущий марафон?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (res == DialogResult.Yes)
+            if (res == DialogResult.No)
                 return;
             
             double prise = Convert.ToDouble(DgvYourMaraph.CurrentRow.Cells[4].Value);
