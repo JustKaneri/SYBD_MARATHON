@@ -106,7 +106,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1334, 58);
+            this.panel1.Size = new System.Drawing.Size(1316, 58);
             this.panel1.TabIndex = 1;
             // 
             // LblTitle
@@ -115,7 +115,7 @@
             this.LblTitle.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LblTitle.Location = new System.Drawing.Point(0, 0);
             this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(1256, 58);
+            this.LblTitle.Size = new System.Drawing.Size(1238, 58);
             this.LblTitle.TabIndex = 1;
             this.LblTitle.Text = "Рабочее место спортсмена";
             this.LblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -124,7 +124,7 @@
             // 
             this.PbxLogo.Dock = System.Windows.Forms.DockStyle.Right;
             this.PbxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbxLogo.Image")));
-            this.PbxLogo.Location = new System.Drawing.Point(1256, 0);
+            this.PbxLogo.Location = new System.Drawing.Point(1238, 0);
             this.PbxLogo.Name = "PbxLogo";
             this.PbxLogo.Size = new System.Drawing.Size(78, 58);
             this.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -583,7 +583,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1334, 656);
+            this.ClientSize = new System.Drawing.Size(1316, 656);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.GrpMaraph);
             this.Controls.Add(this.LblSum);
